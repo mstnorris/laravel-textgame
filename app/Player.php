@@ -21,4 +21,8 @@ class Player extends Model
     public function answers() {
         return $this->belongsToMany(Answer::class);
     }
+
+    public function items() {
+
+    }
 }

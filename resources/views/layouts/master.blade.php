@@ -7,6 +7,24 @@
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
 
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: table;
+        font-weight: 300;
+        font-family: 'Open Sans' sans-serif;
+        background-color: #eceff1;
+        color: #607d8b;
+    }
+    </style>
+
     @yield('header')
 
 </head>

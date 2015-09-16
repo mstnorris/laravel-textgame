@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Player;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,6 +14,10 @@ class PagesController extends Controller
     }
 
     public function game() {
-        return view('index');
+        $player = Player::first();
+
+        //$player->questions()->latest()->first();
+
+        return view('game', compact('player'));
     }
 }

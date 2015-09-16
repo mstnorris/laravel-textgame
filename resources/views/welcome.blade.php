@@ -3,62 +3,49 @@
 @section('header')
 
 <style>
-        html, body {
-        height: 100%;
-        }
-        body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        display: table;
-        font-weight: 300;
-        font-family: 'Open Sans' sans-serif;
-        background-color: #eceff1;
-        color: #607d8b;
-        }
-        .container {
+    .container {
         text-align: center;
         display: table-cell;
         vertical-align: middle;
-        }
-        .content {
+    }
+    .content {
         text-align: center;
         display: inline-block;
-        }
-        .title {
+    }
+    .title {
         font-size: 96px;
-        }
+    }
 
-        .btn-outline {
-            background-color: #eceff1;
-            border-bottom-left-radius: 2em;
-            border-bottom-right-radius: 2em;
-            border-top-left-radius: 2em;
-            border-top-right-radius: 2em;
-            border: 1px solid #607d8b;
-            box-sizing: border-box;
-            color: #607d8b;
-            cursor: pointer;
-            display: inline-block;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.2em;
-            font-weight: 300;
-            height: 4em;
-            letter-spacing: normal;
-            line-height: 2em;
-            margin: 1em 0;
-            padding: 1em 3em;
-            text-align: center;
-            text-indent: 0px;
-            text-shadow: none;
-            vertical-align: middle;
-        }
+    .btn-outline {
+        background-color: #eceff1;
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+        border: 1px solid #607d8b;
+        box-sizing: border-box;
+        color: #607d8b;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        font-weight: 300;
+        height: 4em;
+        letter-spacing: normal;
+        line-height: 2em;
+        margin: 1em 0;
+        padding: 1em 3em;
+        text-align: center;
+        text-indent: 0px;
+        text-shadow: none;
+        vertical-align: middle;
+    }
 
-        .btn-outline:hover {
-            color: #607d8b;
-            background-color: #CFD8DC;
-        }
-        </style>
+    .btn-outline:hover {
+        color: #607d8b;
+        background-color: #CFD8DC;
+    }
+</style>
 
 @endsection
 
@@ -68,7 +55,7 @@
         <div class="content">
             <div class="title">Laravel Text Game</div>
 
-            <a href="{{ route('game_path')" class="btn btn-outline btn-lg">Start Game</a>
+            <a href="{{ route('game_path') }}" class="btn btn-outline btn-lg">Start Game</a>
         </div>
     </div>
 

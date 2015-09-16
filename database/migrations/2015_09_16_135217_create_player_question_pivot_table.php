@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuestionUserPivotTable extends Migration
+class CreatePlayerQuestionPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateQuestionUserPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_user', function(Blueprint $table) {
+        Schema::create('player_question', function(Blueprint $table) {
+            $table->integer('player_id')->unsigned()->index();
+            $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
             $table->integer('question_id')->unsigned()->index();
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->integer('answer_id')->unsigned()->index();
+            $table->integer('answer_id')->unsigned()->index()->nullable();
             $table->foreign('answer_id')->references('id')->on('answers')->onDelete('cascade');
         });
     }
@@ -29,6 +29,6 @@ class CreateQuestionUserPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('question_user');
+        Schema::drop('player_question');
     }
 }
